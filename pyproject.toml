@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "test-poetry-plugins"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.18.1"
+
+[tool.poetry.plugins."poetry.application.plugin"]
+foo-command = "test_poetry_plugins.plugins:MyApplicationPlugin"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
